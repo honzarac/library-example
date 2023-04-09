@@ -1,0 +1,1 @@
+.items-grid{grid-template-columns:50% minmax(100px,1fr) minmax(100px,1fr) minmax(60px,1fr)}

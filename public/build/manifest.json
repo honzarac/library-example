@@ -1,0 +1,49 @@
+{
+  "_Layout-0595caab.js": {
+    "file": "assets/Layout-0595caab.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Dashboard.css": {
+    "file": "assets/Dashboard-eae4ae38.css",
+    "src": "resources/js/Pages/Dashboard.css"
+  },
+  "resources/js/Pages/Dashboard.vue": {
+    "css": [
+      "assets/Dashboard-eae4ae38.css"
+    ],
+    "file": "assets/Dashboard-6191f8b5.js",
+    "imports": [
+      "resources/js/app.js",
+      "_Layout-0595caab.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Dashboard.vue"
+  },
+  "resources/js/Pages/LibraryItem.vue": {
+    "file": "assets/LibraryItem-37fde773.js",
+    "imports": [
+      "resources/js/app.js",
+      "_Layout-0595caab.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/LibraryItem.vue"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-c8cb0fdd.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "css": [
+      "assets/app-c8cb0fdd.css"
+    ],
+    "dynamicImports": [
+      "resources/js/Pages/Dashboard.vue",
+      "resources/js/Pages/LibraryItem.vue"
+    ],
+    "file": "assets/app-294e1cda.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
