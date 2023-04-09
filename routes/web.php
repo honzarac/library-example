@@ -1,9 +1,8 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
+use App\Http\Controllers\LibraryItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +16,6 @@ use Inertia\Inertia;
 */
 
 Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('/library-item/{id}', [LibraryItemController::class, 'detail'])->name('libraryItem.detail');
+Route::post('/library-item/{id}', [LibraryItemController::class, 'update'])->name('libraryItem.update');
+Route::delete('/library-item/{id}', [LibraryItemController::class, 'delete'])->name('libraryItem.delete');
