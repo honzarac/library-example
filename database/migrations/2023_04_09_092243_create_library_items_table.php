@@ -19,6 +19,7 @@ return new class extends Migration
             $table->softDeletes();
             $table->timestamps();
             $table->morphs('borrowable');
+            $table->fullText('name');
         });
     }
 

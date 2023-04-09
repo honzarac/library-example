@@ -12,6 +12,8 @@ class Book extends Model
 
     protected $appends = ['custom_data_labels'];
 
+    protected $fillable = ['isbn'];
+
     public function libraryItem()
     {
         return $this->morphOne(LibraryItem::class, 'borrowable');

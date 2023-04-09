@@ -15,11 +15,13 @@ class LibraryItem extends Model
     protected $appends = ['type_label'];
 
     protected $fillable = [
-        'description'
+        'description',
+        'author_id',
+        'name',
     ];
 
     public static $typeLabels = [
-        Disk::class => 'CD',
+        Disc::class => 'CD',
         Magazine::class => 'časopis',
         Book::class => 'kniha',
     ];
