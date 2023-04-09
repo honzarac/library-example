@@ -1,22 +1,30 @@
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+    import Layout from '@/Layouts/Layout.vue';
+    import { Head } from '@inertiajs/vue3';
+    import LibraryItemRow from "@/Components/LibraryItemRow.vue";
+
+    defineProps({
+        libraryItems: Object,
+    })
 </script>
 
 <template>
     <Head title="Dashboard" />
 
-    <AuthenticatedLayout>
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>
-        </template>
-
+    <Layout>
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">You're logged in!</div>
+            <div class="mx-auto sm:px-6 lg:px-8">
+                <h3 class="text-center font-bold">Tituly k vypůjčení</h3>
+                <div class="items-grid grid gap-4 w-full">
+                    <LibraryItemRow v-for="libraryItem in libraryItems.data" :library-item="libraryItem"></LibraryItemRow>
                 </div>
             </div>
         </div>
-    </AuthenticatedLayout>
+    </Layout>
 </template>
+
+<style>
+    .items-grid {
+        grid-template-columns: 60% 20% 20%;
+    }
+</style>

@@ -47,6 +47,14 @@ services:
                 - '-p${DB_PASSWORD}'
             retries: 3
             timeout: 5s
+
+    adminer:
+        image: adminer:latest
+        ports:
+            - 9999:8080
+        networks:
+            - sail
+
 networks:
     sail:
         driver: bridge
